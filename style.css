@@ -33,9 +33,3 @@
 .mobile-category{border:2px solid #087cf5!important}
 @media(max-width:800px){.product-card{grid-template-columns:1fr}.product-image-wrap{min-height:360px}.product-info{padding:25px}.product-info h3{font-size:26px}}
 @media(max-width:500px){.spec-grid{grid-template-columns:1fr}.product-image-wrap{min-height:300px;padding:20px}.brand-tabs a{padding:8px 13px}}
-
-.samsung-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:25px}
-.model-card{background:#fff;border-radius:14px;padding:18px;text-align:center;box-shadow:0 5px 20px #0002}
-.model-card img{width:100%;height:220px;object-fit:contain}
-.model-card p{line-height:1.8}
-@media(max-width:800px){.samsung-grid{grid-template-columns:1fr}}
