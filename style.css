@@ -40,3 +40,52 @@
 body.arabic-mode{direction:rtl;text-align:right;}
 body.arabic-mode .links{direction:rtl;}
 body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;}
+
+
+/* CCTV Cameras section */
+.camera-section{
+  background:#f7f9fc;
+}
+.camera-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+  max-width:1180px;
+  margin:35px auto 0;
+}
+.camera-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,.10);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.camera-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 42px rgba(0,0,0,.15);
+}
+.camera-card img{
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:#101820;
+}
+.camera-info{
+  padding:22px;
+}
+.camera-info h3{
+  margin:0 0 10px;
+  font-size:1.35rem;
+}
+.camera-info p{
+  min-height:44px;
+  margin:0 0 18px;
+  color:#5c6775;
+}
+.camera-info .order-btn{
+  width:100%;
+}
+@media (max-width:800px){
+  .camera-grid{grid-template-columns:1fr;gap:20px;}
+}
