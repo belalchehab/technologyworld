@@ -89,3 +89,8 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
 @media (max-width:800px){
   .camera-grid{grid-template-columns:1fr;gap:20px;}
 }
+
+
+/* Phone numbers switch to Arabic numerals with the Arabic site language */
+.phone-number{unicode-bidi:isolate;white-space:nowrap;}
+body.arabic-mode .phone-number{direction:ltr;}
