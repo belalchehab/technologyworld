@@ -54,20 +54,6 @@ function setLanguage(){
     el.innerHTML=el.getAttribute(ar?'data-ar':'data-en');
   });
   langBtn.textContent=ar?'English':'العربية';
-  document.querySelectorAll('.phone-number').forEach(el=>{
-    const original = el.dataset.phoneOriginal || el.textContent.trim();
-    el.dataset.phoneOriginal = original;
-    const map = {'0':'٠','1':'١','2':'٢','3':'٣','4':'٤','5':'٥','6':'٦','7':'٧','8':'٨','9':'٩'};
-    const display = ar ? original.replace(/[0-9]/g, d => map[d]) : original;
-    el.textContent = display;
-    el.setAttribute('dir','ltr');
-  });
-  document.querySelectorAll('.phone-number').forEach(el=>{
-    const original=el.dataset.phoneOriginal || el.textContent;
-    el.dataset.phoneOriginal=original;
-    const arabicDigits={'0':'٠','1':'١','2':'٢','3':'٣','4':'٤','5':'٥','6':'٦','7':'٧','8':'٨','9':'٩'};
-    el.textContent=ar ? original.replace(/[0-9]/g,d=>arabicDigits[d]) : original;
-  });
 }
 
 langBtn.addEventListener('click',()=>{

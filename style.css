@@ -89,14 +89,3 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
 @media (max-width:800px){
   .camera-grid{grid-template-columns:1fr;gap:20px;}
 }
-
-
-
-
-/* Keep phone numbers in the correct reading order in both languages */
-.phone-number{
-  direction:ltr;
-  unicode-bidi:isolate;
-  display:inline-block;
-  white-space:nowrap;
-}
