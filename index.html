@@ -175,20 +175,5 @@
 
 
 <script src="script.js"></script>
-<script>
-(function(){
-const d={"Home":"الرئيسية","Products":"المنتجات","Mobile Phones":"الهواتف المحمولة","Services":"الخدمات","About Us":"من نحن","Contact":"اتصل بنا","Contact Us":"تواصل معنا","Our Products":"منتجاتنا","Specifications":"المواصفات","Storage":"سعة التخزين","Price":"السعر","Available Versions & Prices":"النسخ والأسعار المتوفرة","Order on WhatsApp":"اطلب عبر واتساب","Why Technology World?":"لماذا عالم التكنولوجيا؟","Technical Support":"دعم فني","Competitive Prices":"أسعار منافسة","Quality Guaranteed":"جودة مضمونة","Delivery & Installation":"توصيل وتركيب"};
-const original=new WeakMap();
-function setLang(ar){
-document.documentElement.lang=ar?"ar":"en";document.documentElement.dir=ar?"rtl":"ltr";
-document.body.classList.toggle("arabic-mode",ar);
-const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT), a=[];
-while(w.nextNode())a.push(w.currentNode);
-a.forEach(n=>{let v=n.nodeValue,t=v.trim();if(!original.has(n))original.set(n,v);n.nodeValue=ar&&d[t]?v.replace(t,d[t]):original.get(n)});
-localStorage.setItem("twlang",ar?"ar":"en");
-}
-window.setTechnologyWorldLanguage=function(l){setLang(l==="ar")};
-document.addEventListener("DOMContentLoaded",()=>{setLang(localStorage.getItem("twlang")==="ar");document.querySelectorAll("button,a").forEach(e=>{let t=e.textContent.trim().toLowerCase();if(t==="العربية"||t==="arabic"||t==="ar")e.onclick=()=>setLang(true);if(t==="english"||t==="en")e.onclick=()=>setLang(false)})});
-})();
-</script><style>body.arabic-mode{direction:rtl;text-align:right}body.arabic-mode input,body.arabic-mode textarea{text-align:right;direction:rtl}</style></body>
+</body>
 </html>

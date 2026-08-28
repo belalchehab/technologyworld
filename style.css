@@ -35,3 +35,8 @@
 @media(max-width:500px){.spec-grid{grid-template-columns:1fr}.product-image-wrap{min-height:300px;padding:20px}.brand-tabs a{padding:8px 13px}}
 
 .phone-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:35px}.phone-small{background:#fff;border-radius:15px;padding:20px;text-align:center;box-shadow:0 4px 15px #0002}.phone-small img{width:180px;height:220px;object-fit:contain}.phone-small h3{margin:10px 0}.phone-small strong{color:#087cf5;font-size:20px}
+
+/* Arabic language support */
+body.arabic-mode{direction:rtl;text-align:right;}
+body.arabic-mode .links{direction:rtl;}
+body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;}
