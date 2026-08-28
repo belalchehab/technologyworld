@@ -91,6 +91,12 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
 }
 
 
-/* Phone numbers switch to Arabic numerals with the Arabic site language */
-.phone-number{unicode-bidi:isolate;white-space:nowrap;}
-body.arabic-mode .phone-number{direction:ltr;}
+
+
+/* Keep phone numbers in the correct reading order in both languages */
+.phone-number{
+  direction:ltr;
+  unicode-bidi:isolate;
+  display:inline-block;
+  white-space:nowrap;
+}
