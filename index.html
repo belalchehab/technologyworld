@@ -30,7 +30,7 @@
     <h1>Complete Technology Solutions<br><strong>For a Safer, Smarter World</strong></h1>
     <p>CCTV cameras, computers, networking, mobile phones, installation, maintenance and complete technology solutions.</p>
     <a class="btn" href="#products">Browse Products</a>
-    <a class="btn outline" href="https://wa.me/+961 81 85 91 94" target="_blank">WhatsApp Us</a>
+    <a class="btn outline" href="https://wa.me/96181859194" target="_blank">WhatsApp Us</a>
   </div>
 </section>
 
@@ -211,7 +211,7 @@
 <section id="contact" class="contact">
   <h2 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
   <p>📞 +961 81 85 91 94</p><p>📞 +961 81 16 30 40</p>
-  <a class="btn" href="https://wa.me/+961 81 85 91 94" target="_blank" data-ar="راسلنا على واتساب" data-en="Message us on WhatsApp">راسلنا على واتساب</a>
+  <a class="btn" href="https://wa.me/96181859194" target="_blank" data-ar="راسلنا على واتساب" data-en="Message us on WhatsApp">راسلنا على واتساب</a>
 </section>
 
 <footer>
@@ -222,5 +222,30 @@
 
 
 <script src="script.js"></script>
+
+<script>
+(function(){
+const phoneValues=["+961 81 85 91 94","+961 81 16 30 40"];
+function forceEnglishPhones(){
+  const body=document.body;
+  if(!body) return;
+  const map={"٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9"};
+  function norm(x){return x.replace(/[٠-٩]/g,c=>map[c]);}
+  const walker=document.createTreeWalker(body,NodeFilter.SHOW_TEXT);
+  const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(n=>{
+    let t=norm(n.nodeValue);
+    // Normalize any spacing and rewrite exact phone numbers wherever visible.
+    t=t.replace(/\+?961\s*81\s*85\s*91\s*9[45]/g,phoneValues[0]);
+    t=t.replace(/\+?961\s*81\s*16\s*30\s*40/g,phoneValues[1]);
+    n.nodeValue=t;
+  });
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  forceEnglishPhones();
+  document.addEventListener("click",()=>setTimeout(forceEnglishPhones,20),true);
+});
+})();
+</script>
 </body>
 </html>
