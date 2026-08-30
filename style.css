@@ -90,15 +90,4 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
   .camera-grid{grid-template-columns:1fr;gap:20px;}
 }
 
-
-/* Solar Energy section */
-.solar-section{background:#f7f9fc;}
-.solar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;max-width:1180px;margin:35px auto 0;}
-.solar-card{background:#fff;border-radius:18px;padding:28px 22px;box-shadow:0 12px 35px rgba(0,0,0,.10);text-align:center;transition:transform .25s ease;}
-.solar-card:hover{transform:translateY(-6px);}
-.solar-icon{font-size:52px;margin-bottom:14px;}
-.solar-card h3{margin:0 0 12px;}
-.solar-card p{color:#5c6775;min-height:66px;}
-.solar-card .order-btn{width:100%;margin-top:12px;}
-@media(max-width:900px){.solar-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media(max-width:560px){.solar-grid{grid-template-columns:1fr;}}
+.phone-number{direction:ltr;unicode-bidi:isolate;display:inline-block;white-space:nowrap;}

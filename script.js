@@ -63,7 +63,7 @@ langBtn.addEventListener('click',()=>{
 
 function order(item){
   const msg=encodeURIComponent((lang==='ar'?'مرحباً، أريد الاستفسار عن: ':'Hello, I would like to ask about: ')+item);
-  window.open('https://wa.me/96181859194?text='+msg,'_blank');
+  window.open('https://wa.me/+961 81 85 91 94?text='+msg,'_blank');
 }
 
 // English is always the default when opening the website.

@@ -30,7 +30,7 @@
     <h1>Complete Technology Solutions<br><strong>For a Safer, Smarter World</strong></h1>
     <p>CCTV cameras, computers, networking, mobile phones, installation, maintenance and complete technology solutions.</p>
     <a class="btn" href="#products">Browse Products</a>
-    <a class="btn outline" href="https://wa.me/96181859194" target="_blank">WhatsApp Us</a>
+    <a class="btn outline" href="https://wa.me/+961 81 85 91 94" target="_blank">WhatsApp Us</a>
   </div>
 </section>
 
@@ -52,8 +52,9 @@
     <article><div class="icon">🔌</div><h3>Accessories</h3><p>Cables, adapters, power supplies and accessories.</p><a class="category-link" href="#products">View category</a></article>
     <article class="mobile-category"><div class="icon">📱</div><h3>Mobile Phones</h3><p>Smartphones and mobile accessories from leading brands.</p><a class="category-link" href="#mobiles">Open Mobile Phones</a></article>
   </div>
-<article><div class="icon">☀️</div><h3>Solar Energy</h3><p>Solar panels, inverters, batteries and complete solar energy solutions.</p><a class="category-link" href="#solar">View category</a></article></section>
+</section>
 
+<article><div class="icon">☀️</div><h3>Solar Energy</h3><p>Solar panels, inverters, batteries and complete solar energy solutions.</p><a class="category-link" href="#solar">View category</a></article></section>
 
 <section id="solar" class="section solar-section">
   <div class="section-heading">
@@ -246,7 +247,7 @@
 <section id="contact" class="contact">
   <h2 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
   <p>📞 +961 81 85 91 94</p><p>📞 +961 81 16 30 40</p>
-  <a class="btn" href="https://wa.me/96181859194" target="_blank" data-ar="راسلنا على واتساب" data-en="Message us on WhatsApp">راسلنا على واتساب</a>
+  <a class="btn" href="https://wa.me/+961 81 85 91 94" target="_blank" data-ar="راسلنا على واتساب" data-en="Message us on WhatsApp">راسلنا على واتساب</a>
 </section>
 
 <footer>
@@ -257,37 +258,5 @@
 
 
 <script src="script.js"></script>
-
-
-
-
-
-<script>
-(function(){
-  function applyPhoneOrder(){
-    const ar=document.documentElement.lang==='ar' || document.documentElement.dir==='rtl';
-    const phones=ar
-      ? ["94 91 85 81 961+","40 30 16 81 961+"]
-      : ["+961 81 85 91 94","+961 81 16 30 40"];
-    document.querySelectorAll('.phone-number').forEach((el,i)=>{
-      el.textContent=phones[i] || el.textContent;
-      el.style.direction='ltr';
-      el.style.unicodeBidi='isolate';
-    });
-    const all=[...document.querySelectorAll('p,span,a,div')];
-    all.forEach(el=>{
-      if(el.children.length!==0) return;
-      let t=el.textContent.replace(/[٠-٩]/g,c=>"٠١٢٣٤٥٦٧٨٩".indexOf(c));
-      if(/\+?961\s*81\s*85\s*91\s*94|94\s*91\s*85\s*81\s*961\+/.test(t)) el.textContent=phones[0];
-      if(/\+?961\s*81\s*16\s*30\s*40|40\s*30\s*16\s*81\s*961\+/.test(t)) el.textContent=phones[1];
-    });
-  }
-  document.addEventListener('DOMContentLoaded',()=>{
-    applyPhoneOrder();
-    new MutationObserver(()=>applyPhoneOrder()).observe(document.documentElement,{attributes:true,attributeFilter:['lang','dir'],subtree:true});
-    document.addEventListener('click',()=>setTimeout(applyPhoneOrder,100),true);
-  });
-})();
-</script>
 </body>
 </html>
