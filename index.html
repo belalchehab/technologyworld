@@ -223,28 +223,28 @@
 
 <script src="script.js"></script>
 
+
+
 <script>
 (function(){
-const phoneValues=["+961 81 85 91 94","+961 81 16 30 40"];
-function forceEnglishPhones(){
-  const body=document.body;
-  if(!body) return;
-  const map={"٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9"};
-  function norm(x){return x.replace(/[٠-٩]/g,c=>map[c]);}
-  const walker=document.createTreeWalker(body,NodeFilter.SHOW_TEXT);
-  const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(n=>{
-    let t=norm(n.nodeValue);
-    // Normalize any spacing and rewrite exact phone numbers wherever visible.
-    t=t.replace(/\+?961\s*81\s*85\s*91\s*9[45]/g,phoneValues[0]);
-    t=t.replace(/\+?961\s*81\s*16\s*30\s*40/g,phoneValues[1]);
-    n.nodeValue=t;
+  function fixPhones(){
+    const ar = document.documentElement.lang === 'ar' || document.documentElement.dir === 'rtl';
+    const values = ar
+      ? ["94 91 85 81 961+","40 30 16 81 961+"]
+      : ["+961 81 85 91 94","+961 81 16 30 40"];
+    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n=>{
+      let t=n.nodeValue.replace(/[٠-٩]/g,c=>"٠١٢٣٤٥٦٧٨٩".indexOf(c));
+      t=t.replace(/\+?961\s*81\s*85\s*91\s*94|94\s*91\s*85\s*81\s*961\+/g,values[0]);
+      t=t.replace(/\+?961\s*81\s*16\s*30\s*40|40\s*30\s*16\s*81\s*961\+/g,values[1]);
+      n.nodeValue=t;
+    });
+  }
+  document.addEventListener("DOMContentLoaded",()=>{
+    fixPhones();
+    document.addEventListener("click",()=>setTimeout(fixPhones,50),true);
   });
-}
-document.addEventListener("DOMContentLoaded",()=>{
-  forceEnglishPhones();
-  document.addEventListener("click",()=>setTimeout(forceEnglishPhones,20),true);
-});
 })();
 </script>
 </body>
