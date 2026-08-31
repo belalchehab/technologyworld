@@ -2,18 +2,11 @@ let lang='en';
 const langBtn=document.getElementById('lang');
 
 const translations = {
-"Home":"الرئيسية",
-
-"Laptops":"اللابتوبات",
-"High-performance laptops for work, study and everyday use.":"لابتوبات عالية الأداء للعمل والدراسة والاستخدام اليومي.",
+"Home":"الرئيسية","Laptops":"اللابتوبات",
+"Professional laptops for work, study and everyday use.":"لابتوبات احترافية للعمل والدراسة والاستخدام اليومي.",
 "Dell Vostro 3320 13.3\" Laptop":"لابتوب Dell Vostro 3320 قياس 13.3 بوصة",
 "HP 15-FD0130WM 15.6\" Touchscreen Laptop":"لابتوب HP 15-FD0130WM قياس 15.6 بوصة بشاشة لمس",
-"Evolve III Maestro 11.6\" HD Laptop":"لابتوب Evolve III Maestro قياس 11.6 بوصة HD",
-"Intel i5-1145G7":"Intel i5-1145G7","8GB RAM":"8GB RAM","256GB SSD":"256GB SSD",
-"Intel Iris XE Graphics":"Intel Iris XE Graphics","Intel Core i3-N305":"Intel Core i3-N305",
-"Intel Graphics":"Intel Graphics","Intel N3450":"Intel N3450","4GB RAM":"4GB RAM",
-"64GB eMMC":"64GB eMMC","Windows 10 PE":"Windows 10 PE",
-"Products":"المنتجات","Mobile Phones":"الهواتف المحمولة",
+"Evolve III Maestro 11.6\" HD Laptop":"لابتوب Evolve III Maestro قياس 11.6 بوصة HD","Products":"المنتجات","Mobile Phones":"الهواتف المحمولة",
 "Services":"الخدمات","About Us":"من نحن","Contact":"اتصل بنا",
 "Complete Technology Solutions":"حلول تقنية متكاملة",
 "For a Safer, Smarter World":"لعالم أكثر أماناً وذكاءً",

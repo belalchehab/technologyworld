@@ -104,94 +104,31 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
 @media(max-width:560px){.solar-grid{grid-template-columns:1fr;}}
 
 
-/* --- Laptops section --- */
-.laptops-section{
-  background:linear-gradient(180deg,#f7f9fc 0%,#eef4fb 100%);
-}
-.laptop-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:26px;
-  max-width:1280px;
-  margin:35px auto 0;
-}
-.laptop-card{
-  background:#fff;
-  border:1px solid #dce5f0;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 14px 38px rgba(16,24,40,.10);
-  text-align:left;
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.laptop-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 46px rgba(16,24,40,.16);
-}
-.laptop-image-wrap{
-  min-height:285px;
-  display:flex;
+/* Correct top contact numbers */
+.top .top-phones{
+  direction:ltr !important;
+  unicode-bidi:isolate !important;
+  display:flex !important;
   align-items:center;
-  justify-content:center;
-  padding:24px;
-  background:
-    radial-gradient(circle at 20% 15%,rgba(8,124,245,.20),transparent 35%),
-    radial-gradient(circle at 80% 80%,rgba(8,124,245,.12),transparent 35%),
-    linear-gradient(145deg,#0b1624,#173354);
-  overflow:hidden;
+  gap:10px;
+  white-space:nowrap;
+  overflow:visible !important;
 }
-.laptop-image-wrap img{
-  width:100%;
-  max-height:245px;
-  object-fit:contain;
-  display:block;
-  filter:drop-shadow(0 18px 16px rgba(0,0,0,.35));
-}
-.laptop-info{
-  padding:24px;
-}
-.laptop-info h3{
-  margin:0 0 14px;
-  font-size:21px;
-  line-height:1.35;
-}
-.laptop-info ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:9px 14px;
-  color:#475467;
-}
-.laptop-info li{
-  position:relative;
-  padding-left:16px;
-  font-size:14px;
-}
-.laptop-info li:before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  color:#087cf5;
-  font-weight:900;
-}
-.laptop-price{
-  margin-top:22px;
-  color:#087cf5;
-  font-size:27px;
-  font-weight:900;
-  text-align:center;
-}
-.laptop-card .order-btn{
-  margin-top:18px;
-  background:#087cf5;
-}
-@media(max-width:1000px){
-  .laptop-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:650px){
-  .laptop-grid{grid-template-columns:1fr;}
-  .laptop-info ul{grid-template-columns:1fr;}
-  .laptop-image-wrap{min-height:260px;}
-}
+.top .top-phones b{font-weight:inherit; direction:ltr !important; unicode-bidi:isolate;}
+.top .top-phones i{font-style:normal;}
+
+/* Laptops: professional cards */
+.laptops-section{background:linear-gradient(180deg,#f8fbff,#eef4fb);}
+.laptop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:35px auto 0;max-width:1320px;}
+.laptop-card{background:#fff;border:1px solid #d9e2ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(16,24,40,.10);text-align:left;}
+.laptop-image-wrap{height:285px;display:flex;align-items:center;justify-content:center;background:#0b1d33;overflow:hidden;}
+.laptop-image-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.laptop-info{padding:23px 24px 25px;}
+.laptop-info h3{margin:0 0 16px;font-size:21px;line-height:1.35;min-height:57px;}
+.laptop-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;color:#475467;}
+.laptop-specs span{font-size:14px;position:relative;padding-left:16px;}
+.laptop-specs span:before{content:"✓";position:absolute;left:0;color:#087cf5;font-weight:900;}
+.laptop-price{text-align:center;font-size:28px;font-weight:900;color:#087cf5;margin:22px 0 8px;}
+.laptop-card .order-btn{width:100%;margin-top:10px;}
+@media(max-width:900px){.laptop-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:620px){.top{gap:8px;flex-wrap:wrap;justify-content:center!important}.top .top-phones{font-size:12px;gap:6px}.laptop-grid{grid-template-columns:1fr;}.laptop-image-wrap{height:260px;}.laptop-specs{grid-template-columns:1fr;}}
