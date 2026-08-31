@@ -15,6 +15,7 @@
     <div class="links">
       <a href="#home">Home</a>
       <a href="#products">Products</a>
+      <a href="#laptops">Laptops</a>
       <a href="#mobiles">Mobile Phones</a>
       <a href="#services">Services</a>
       <a href="#about">About Us</a>
@@ -46,14 +47,76 @@
   <p class="lead">Choose a product category. Detailed devices, specifications and prices are displayed inside their dedicated category.</p>
   <div class="grid">
     <article><div class="icon">📷</div><h3>CCTV Cameras</h3><p>Dahua, IP cameras, NVRs and surveillance accessories.</p><a class="category-link" href="#cameras">View category</a></article>
-    <article><div class="icon">💻</div><h3>Computers & Laptops</h3><p>Computers, laptops and accessories.</p><a class="category-link" href="#products">View category</a></article>
+    <article><div class="icon">💻</div><h3>Computers & Laptops</h3><p>Computers, laptops and accessories.</p><a class="category-link" href="#laptops">View category</a></article>
     <article><div class="icon">🌐</div><h3>Networking</h3><p>Routers, switches, cables and networking solutions.</p><a class="category-link" href="#products">View category</a></article>
     <article><div class="icon">🔧</div><h3>Installation & Maintenance</h3><p>Professional installation and device maintenance.</p><a class="category-link" href="#services">View services</a></article>
     <article><div class="icon">🔌</div><h3>Accessories</h3><p>Cables, adapters, power supplies and accessories.</p><a class="category-link" href="#products">View category</a></article>
-    <article><div class="icon">📱</div><h3>Mobile Phones</h3><p>Smartphones and mobile accessories from leading brands.</p><a class="category-link" href="#mobiles">View category</a></article>
-    <article><div class="icon">☀️</div><h3>Solar Energy</h3><p>Solar panels, inverters, batteries and complete solar energy solutions.</p><a class="category-link" href="#solar">View category</a></article>
+    <article class="mobile-category"><div class="icon">📱</div><h3>Mobile Phones</h3><p>Smartphones and mobile accessories from leading brands.</p><a class="category-link" href="#mobiles">Open Mobile Phones</a></article>
+  </div>
+<article><div class="icon">☀️</div><h3>Solar Energy</h3><p>Solar panels, inverters, batteries and complete solar energy solutions.</p><a class="category-link" href="#solar">View category</a></article></section>
+
+
+
+<section id="laptops" class="section laptops-section">
+  <div class="section-heading">
+    <span class="badge">LAPTOPS</span>
+    <h2>Laptops</h2>
+    <p class="lead">High-performance laptops for work, study and everyday use.</p>
   </div>
 
+  <div class="laptop-grid">
+    <article class="laptop-card">
+      <div class="laptop-image-wrap">
+        <img src="images/dell-vostro-3320.png" alt="Dell Vostro 3320 13.3 Laptop">
+      </div>
+      <div class="laptop-info">
+        <h3>Dell Vostro 3320 13.3" Laptop</h3>
+        <ul>
+          <li>Intel i5-1145G7</li>
+          <li>8GB RAM</li>
+          <li>256GB SSD</li>
+          <li>Intel Iris XE Graphics</li>
+        </ul>
+        <div class="laptop-price">$550 ONLY</div>
+        <button class="order-btn" onclick="order('Dell Vostro 3320 13.3 Laptop')">Order on WhatsApp</button>
+      </div>
+    </article>
+
+    <article class="laptop-card">
+      <div class="laptop-image-wrap">
+        <img src="images/hp-15-fd0130wm.png" alt="HP 15-FD0130WM 15.6 Touchscreen Laptop">
+      </div>
+      <div class="laptop-info">
+        <h3>HP 15-FD0130WM 15.6" Touchscreen Laptop</h3>
+        <ul>
+          <li>Intel Core i3-N305</li>
+          <li>8GB RAM</li>
+          <li>256GB SSD</li>
+          <li>Intel Graphics</li>
+        </ul>
+        <div class="laptop-price">$530 ONLY</div>
+        <button class="order-btn" onclick="order('HP 15-FD0130WM 15.6 Touchscreen Laptop')">Order on WhatsApp</button>
+      </div>
+    </article>
+
+    <article class="laptop-card">
+      <div class="laptop-image-wrap">
+        <img src="images/evolve-iii-maestro.png" alt="Evolve III Maestro 11.6 HD Laptop">
+      </div>
+      <div class="laptop-info">
+        <h3>Evolve III Maestro 11.6" HD Laptop</h3>
+        <ul>
+          <li>Intel N3450</li>
+          <li>4GB RAM</li>
+          <li>64GB eMMC</li>
+          <li>Windows 10 PE</li>
+        </ul>
+        <div class="laptop-price">$90 ONLY</div>
+        <button class="order-btn" onclick="order('Evolve III Maestro 11.6 HD Laptop')">Order on WhatsApp</button>
+      </div>
+    </article>
+  </div>
+</section>
 
 <section id="solar" class="section solar-section">
   <div class="section-heading">
@@ -260,25 +323,32 @@
 
 
 
+
+
 <script>
 (function(){
-  function fixPhones(){
-    const ar = document.documentElement.lang === 'ar' || document.documentElement.dir === 'rtl';
-    const values = ar
+  function applyPhoneOrder(){
+    const ar=document.documentElement.lang==='ar' || document.documentElement.dir==='rtl';
+    const phones=ar
       ? ["94 91 85 81 961+","40 30 16 81 961+"]
       : ["+961 81 85 91 94","+961 81 16 30 40"];
-    const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
-    const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
-    nodes.forEach(n=>{
-      let t=n.nodeValue.replace(/[٠-٩]/g,c=>"٠١٢٣٤٥٦٧٨٩".indexOf(c));
-      t=t.replace(/\+?961\s*81\s*85\s*91\s*94|94\s*91\s*85\s*81\s*961\+/g,values[0]);
-      t=t.replace(/\+?961\s*81\s*16\s*30\s*40|40\s*30\s*16\s*81\s*961\+/g,values[1]);
-      n.nodeValue=t;
+    document.querySelectorAll('.phone-number').forEach((el,i)=>{
+      el.textContent=phones[i] || el.textContent;
+      el.style.direction='ltr';
+      el.style.unicodeBidi='isolate';
+    });
+    const all=[...document.querySelectorAll('p,span,a,div')];
+    all.forEach(el=>{
+      if(el.children.length!==0) return;
+      let t=el.textContent.replace(/[٠-٩]/g,c=>"٠١٢٣٤٥٦٧٨٩".indexOf(c));
+      if(/\+?961\s*81\s*85\s*91\s*94|94\s*91\s*85\s*81\s*961\+/.test(t)) el.textContent=phones[0];
+      if(/\+?961\s*81\s*16\s*30\s*40|40\s*30\s*16\s*81\s*961\+/.test(t)) el.textContent=phones[1];
     });
   }
-  document.addEventListener("DOMContentLoaded",()=>{
-    fixPhones();
-    document.addEventListener("click",()=>setTimeout(fixPhones,50),true);
+  document.addEventListener('DOMContentLoaded',()=>{
+    applyPhoneOrder();
+    new MutationObserver(()=>applyPhoneOrder()).observe(document.documentElement,{attributes:true,attributeFilter:['lang','dir'],subtree:true});
+    document.addEventListener('click',()=>setTimeout(applyPhoneOrder,100),true);
   });
 })();
 </script>
