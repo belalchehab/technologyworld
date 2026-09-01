@@ -132,3 +132,20 @@ body.arabic-mode input,body.arabic-mode textarea{direction:rtl;text-align:right;
 .laptop-card .order-btn{width:100%;margin-top:10px;}
 @media(max-width:900px){.laptop-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:620px){.top{gap:8px;flex-wrap:wrap;justify-content:center!important}.top .top-phones{font-size:12px;gap:6px}.laptop-grid{grid-template-columns:1fr;}.laptop-image-wrap{height:260px;}.laptop-specs{grid-template-columns:1fr;}}
+
+
+/* Desktop Computers section - added without changing existing sections */
+.desktop-section{background:linear-gradient(180deg,#f8fbff,#eef4fb);}
+.desktop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:35px auto 0;max-width:1320px;}
+.desktop-card{background:#fff;border:1px solid #d9e2ec;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(16,24,40,.10);text-align:left;}
+.desktop-image-wrap{height:360px;display:flex;align-items:center;justify-content:center;background:#eef2f6;overflow:hidden;padding:0;}
+.desktop-image-wrap img{width:100%;height:100%;object-fit:contain;display:block;}
+.desktop-info{padding:23px 24px 25px;}
+.desktop-info h3{margin:0 0 16px;font-size:21px;line-height:1.35;min-height:57px;}
+.desktop-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;color:#475467;}
+.desktop-specs span{font-size:14px;position:relative;padding-left:16px;}
+.desktop-specs span:before{content:"✓";position:absolute;left:0;color:#087cf5;font-weight:900;}
+.desktop-price{text-align:center;font-size:28px;font-weight:900;color:#087cf5;margin:22px 0 8px;}
+.desktop-card .order-btn{width:100%;margin-top:10px;}
+@media(max-width:900px){.desktop-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:620px){.desktop-grid{grid-template-columns:1fr;}.desktop-image-wrap{height:320px;}.desktop-specs{grid-template-columns:1fr;}}

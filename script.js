@@ -2,7 +2,16 @@ let lang='en';
 const langBtn=document.getElementById('lang');
 
 const translations = {
-"Home":"الرئيسية","Laptops":"اللابتوبات",
+"Home":"الرئيسية","Laptops":"اللابتوبات","Desktop Computers":"أجهزة الكمبيوتر المكتبية","Desktop":"أجهزة الكمبيوتر المكتبية",
+"Professional Dell and Lenovo desktop computers.":"أجهزة كمبيوتر مكتبية احترافية من Dell وLenovo.",
+"Professional Dell and Lenovo desktop computers for work, business and everyday use.":"أجهزة كمبيوتر مكتبية احترافية للعمل والأعمال والاستخدام اليومي.",
+"Dell OptiPlex 7010 SFF Desktop PC":"كمبيوتر مكتبي Dell OptiPlex 7010 SFF",
+"Lenovo ThinkCentre M900 SFF Desktop PC":"كمبيوتر مكتبي Lenovo ThinkCentre M900 SFF",
+"Lenovo ThinkCentre M900 Tiny Desktop PC":"كمبيوتر مكتبي Lenovo ThinkCentre M900 Tiny",
+"Dell OptiPlex 3050 SFF Desktop PC":"كمبيوتر مكتبي Dell OptiPlex 3050 SFF",
+"Dell OptiPlex 3060 SFF Desktop PC":"كمبيوتر مكتبي Dell OptiPlex 3060 SFF",
+"Dell OptiPlex 3070 SFF Desktop PC":"كمبيوتر مكتبي Dell OptiPlex 3070 SFF",
+"Intel i5-13th Gen":"Intel i5-الجيل 13","Intel i5-6th Gen":"Intel i5-الجيل 6","Intel i3-7th Gen":"Intel i3-الجيل 7","Intel i3-8th Gen":"Intel i3-الجيل 8","Intel i3-9th Gen":"Intel i3-الجيل 9","16GB RAM":"ذاكرة RAM 16GB","8GB RAM":"ذاكرة RAM 8GB","256GB SSD":"SSD 256GB",
 "Professional laptops for work, study and everyday use.":"لابتوبات احترافية للعمل والدراسة والاستخدام اليومي.",
 "Dell Vostro 3320 13.3\" Laptop":"لابتوب Dell Vostro 3320 قياس 13.3 بوصة",
 "HP 15-FD0130WM 15.6\" Touchscreen Laptop":"لابتوب HP 15-FD0130WM قياس 15.6 بوصة بشاشة لمس",
